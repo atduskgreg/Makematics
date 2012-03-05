@@ -1,0 +1,15 @@
+
+http://username.github.com/archive.html
+http://username.github.com/atom.xml
+http://username.github.com/categories.html
+http://username.github.com/index.html
+http://username.github.com/pages.html
+http://username.github.com/research/dfd/index.html
+http://username.github.com/research/index.html
+http://username.github.com/research/posit/index.html
+http://username.github.com/research/ransac/index.html
+http://username.github.com/research/watercolor/index.html
+http://username.github.com/sitemap.txt
+http://username.github.com/tags.html
+
+http://username.github.com/lessons/2011/12/29/jekyll-introduction
