@@ -12,9 +12,103 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+
+    <!--[if lt IE 9]>
+    <![endif]-->
+        <link href="/assets/css/blueprint/ie.css" rel="stylesheet" type="text/css" media="all">
+
     <!-- Le styles -->
-    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/css/blueprint/screen.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style>
+      body{
+        font-size: 100%;
+        line-height: 1.5;
+        background-color: #dee;
+      }
+
+      #header {
+        margin-bottom: 3em;
+      }
+      
+      h1 a{
+        text-decoration: none;
+        color: #eff;
+        background: #566;
+                
+      }
+      
+      h1 a:hover{
+        color: #eff;
+
+      }
+      
+      h1 {
+        font-size: 32px;
+        border-bottom: 4px solid #566;
+      }
+      
+      
+      a{
+                text-decoration: none;
+      }
+      
+      a:hover{
+                text-decoration: underline;
+
+      }
+      
+      h2 a {
+        font-weight: bold;
+        color: #566;
+      }
+
+      h2 a:hover{
+        color: #566;
+      }
+
+      h2 {
+          font-weight: bold;
+        color: #566;
+      }
+     
+      
+      #sidebar {
+        border-left: 1px solid #cdd;
+        padding-left: 9px;
+        margin-top: 160px;
+      }
+      
+      #sidebar a {
+        color: #566;
+      }
+      
+      #sidebar ul {
+        color: #566;
+                padding-left: 5px;
+
+      }
+      #sidebar li {
+        margin-bottom: 16px;
+        list-style-type: none;
+      }
+
+
+      #footer {
+        border-top: 2px solid #cdd;
+        text-align: center;
+        font-style: italic;
+        color: #566;
+        padding-top: 1em;
+        font-size: 75%;
+      }
+
+      .footer-divider{
+        color: #cdd;
+
+      }
+      
+    </style>
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -23,148 +117,114 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  
+
+
   </head>
 
   <body>
-
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/">Makematics</a>
-          <ul class="nav">
-            
-            
-            
-
-
-  
-    
-    	
-    	<li><a href="/archive.html">Archive</a></li>
-    	
-    
-  
-    
-  
-    
-    	
-    	<li><a href="/categories.html">Categories</a></li>
-    	
-    
-  
-    
-  
-    
-    	
-    	<li><a href="/pages.html">Pages</a></li>
-    	
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-    	
-    	<li><a href="/tags.html">Tags</a></li>
-    	
-    
-  
-
-
-
-          </ul>
-        </div>
-      </div>
-    </div>
-
     <div class="container">
 
-      <div class="content">
+      <div id="header" class="span-20 push-2">
+          <h1 style="color:orange"><a href="/">Makematics</a></h1>
+      
+      </div>
+
+      <div id="content-wrapper" class="span-20  push-2">
         
 <div class="page-header">
-  <h1>Research <small></small></h1>
+  <h2>Research <small></small></h2>
 </div>
 
 <div class="row">
   <div class="span12">
-    <h2 id='academic_papers'>Academic Papers</h2>
+    <h2>Academic Papers</h2>
 
-<p><em>This section lists academic papers that describe techniques we&#8217;d like to implement in code. These can range from artistic effects in computer graphics to novel 3D scanning or computer vision approaches to ways of processing or generating 3D geometry for fabrication. Each entry includes a brief description of the technique and links to a page with more details. Those pages will act as a working area to understand and explain the technique as well as including links to code that implements it. If you would like to participate in breaking down or implementing any paper, please do so. Participation is highly welcome.</em></p>
+<p><em>This section lists academic papers that describe techniques we&rsquo;d like to implement in code. These can range from artistic effects in computer graphics to novel 3D scanning or computer vision approaches to ways of processing or generating 3D geometry for fabrication. Each entry includes a brief description of the technique and links to a page with more details. Those pages will act as a working area to understand and explain the technique as well as including links to code that implements it. If you would like to participate in breaking down or implementing any paper, please do so. Participation is highly welcome.</em></p>
 
-<h3 id='depth_from_focusdefocus'><a href='/research/dfd'>Depth from Focus/Defocus</a></h3>
+<h3><a href="/research/dfd">Depth from Focus/Defocus</a></h3>
 
-<p><img alt='Depth from focus/defocus' src='http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/FAVARO1/geometry.jpg' /></p>
+<p><img src="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/FAVARO1/geometry.jpg" alt="Depth from focus/defocus" /></p>
 
-<p><em>This research describes a method for extracting 3D geometry from a series of images with different focal depths of the same scene. It seems especially promising given the availability of the <a href='http://www.lytro.com/'>Lytro</a> camera that can adjust focus after the taking of a photograph.</em></p>
+<p><em>This research describes a method for extracting 3D geometry from a series of images with different focal depths of the same scene. It seems especially promising given the availability of the <a href="http://www.lytro.com/">Lytro</a> camera that can adjust focus after the taking of a photograph.</em></p>
 
-<h3 id='computergenerated_watercolor'><a href='/research/watercolor'>Computer-Generated Watercolor</a></h3>
+<h3><a href="/research/watercolor">Computer-Generated Watercolor</a></h3>
 
-<p><img alt='simulated watercolor' src='/assets/images/simulated_watercolor.png' /></p>
+<p><img src="/assets/images/simulated_watercolor.png" alt="simulated watercolor" /></p>
 
 <p><em>This paper describes a way to create realistic watercolor effects by simulating the interaction of water, pigment, and paper. It uses a cellular automata-based system as well as a model of the flow of water to emulate how watercolor distributes pigment as it is absorbed by paper. The authors include detailed pseudocode of the algorithms involved. The mathematical level involved appears to be some mild vector calculus.</em></p>
 
-<h3 id='pose_from_orthography_and_scaling_with_iterations_posit'><a href='/research/posit'>Pose from Orthography and Scaling with Iterations (POSIT)</a></h3>
+<h3><a href="/research/posit">Pose from Orthography and Scaling with Iterations (POSIT)</a></h3>
 
-<p><em>This is a technique for estimating the pose of an object from a single image. It has promising applications for augmented reality amongst other areas. The original paper has an implementation in Mathematica and there&#8217;s a link to a Willow Garage page that summarizes an implementation in OpenCV and OpenGL.</em></p>
+<p><em>This is a technique for estimating the pose of an object from a single image. It has promising applications for augmented reality amongst other areas. The original paper has an implementation in Mathematica and there&rsquo;s a link to a Willow Garage page that summarizes an implementation in OpenCV and OpenGL.</em></p>
 
-<h3 id='screen_space_ambient_occlusion'><a href='/research/ssao'>Screen Space Ambient Occlusion</a></h3>
+<h3><a href="/research/ssao">Screen Space Ambient Occlusion</a></h3>
 
-<h3 id='random_sample_consensus_ransac'><a href='/research/ransac'>Random Sample Consensus (RANSAC)</a></h3>
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/8/8b/Screen_space_ambient_occlusion.jpg" alt="screen space ambient occlusion" /></p>
 
-<p><img alt='RANSAC plane fitting' src='http://www.mrpt.org/sites/default/files/images/Ransac_example_3D_plane_0.png' /></p>
+<p><em>This is a technique that produces realistic lighting and reflection in 3D renders in real time. It is implemented in a pixel shader. There is working, but messy, OpenFrameworks code.</em></p>
 
-<p><em>RANSAC is an method for fitting lines and planes to observed data. In a world with a lot of point clouds, it seems like it might be useful for extracting simplified geometry from rich but noisy 3D scans.</em></p>
+<h3><a href="/research/ransac">Random Sample Consensus (RANSAC)</a></h3>
 
-<h2 id='math_concepts'>Math Concepts</h2>
+<p><img src="http://www.mrpt.org/sites/default/files/images/Ransac_example_3D_plane_0.png" alt="RANSAC plane fitting" /></p>
+
+<p><em>RANSAC is an method for fitting lines and planes to observed data. In a world with a lot of point clouds, it seems like it might be useful for extracting simplified geometry from rich but noisy 3D scans. There are a number of viable implementations around including a partial one in OpenFrameworks.</em></p>
+
+<h3><a href="/research/gigavoxels">GigaVoxels</a></h3>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/HScYuRhgEJw" frameborder="0" allowfullscreen></iframe>
+
+
+<p><em>This is a very sophisticated technique for rendering large volumetric data sets. It can display billions of voxels in real time.</em></p>
+
+<h3><a href="/research/mipmapping">Mipmapping</a></h3>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/5/5c/MipMap_Example_STS101.jpg" alt="Mipmapping texture" /></p>
+
+<p><em>This is a technique for combining multiple sizes of the same texture to do efficient rendering at multiple levels of detail from way zoomed out to up-close.</em></p>
+
+<h2>Math Concepts</h2>
 
 <p><em>This section lists mathematical techniques and terms that show up repeatedly in the academic papers above. Understanding and implementing those papers require a working knowledge of these techniques and how to turn them into code. The pages linked here will act as a working area to understand these mathematical concepts and to learn how to work with them in code.</em></p>
 
-<h3 id='euler_angles'><a href='/research/euler_angles'>Euler Angles</a></h3>
+<h3><a href="/research/euler_angles">Euler Angles</a></h3>
 
-<h3 id='quaternions'><a href='/research/quaternions'>Quaternions</a></h3>
+<h3><a href="/research/quaternions">Quaternions</a></h3>
 
-<h3 id='laplacian'><a href='/research/laplacian'>Laplacian</a></h3>
+<h3><a href="/research/laplacian">Laplacian</a></h3>
 
-<h3 id='normals_and_cross_products'><a href='/research/normals'>Normals and Cross Products</a></h3>
+<h3><a href="/research/normals">Normals and Cross Products</a></h3>
 
-<h3 id='gaussian_function'><a href='/research/gaussian'>Gaussian Function</a></h3>
+<h3><a href="/research/gaussian">Gaussian Function</a></h3>
 
-<h3 id='kalman_filters'><a href='/research/kalman'>Kalman Filters</a></h3>
+<h3><a href="/research/kalman">Kalman Filters</a></h3>
 
-<h2 id='programming_techniques'>Programming Techniques</h2>
+<h2>Programming Techniques</h2>
 
 <p><em>This section lists programming techniques that are needed to implement the ideas and algorithms in the academic papers listed above. To turn the ideas in these papers into practical code often involves learning to write code that uses some of the advanced features of modern graphics programming. The pages linked from this section will act as a working area to understand these features and how to use them in practice. Where possible they will include examples in as many languages as possible. Contributions welcome.</em></p>
 
-<h3 id='frame_buffer_objects_fbos'>Frame Buffer Objects (FBOs)</h3>
+<h3>Frame Buffer Objects (FBOs)</h3>
 
-<h3 id='pixel_shaders'>Pixel Shaders</h3>
+<h3>Pixel Shaders</h3>
 
-<h3 id='vertex_shaders'>Vertex Shaders</h3>
+<h3>Vertex Shaders</h3>
 
-<h3 id='geometry_shaders'>Geometry Shaders</h3>
+<h3>Geometry Shaders</h3>
 
-<h3 id='vertex_buffer_objects_vbos'>Vertex Buffer Objects (VBOs)</h3>
+<h3>Vertex Buffer Objects (VBOs)</h3>
+
   </div>
 </div>
 
 
       </div>
 
-      <footer>
-        <p>&copy; Greg Borenstein 2012 
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+      <div id="footer" class="span-20 push-2">
+        <p>&copy; Greg Borenstein 2012 <span class="footer-divider">|</span> <a href="http://twitter.com/makematics">@makematics</a> <span class="footer-divider">|</span> <a href="http://github.com/atduskgreg/makematics">github/makematics</a>
         </p>
-      </footer>
+      </div>
 
     </div> <!-- /container -->
 

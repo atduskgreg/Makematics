@@ -1,0 +1,45 @@
+<style>
+  img {
+    border: 1px solid #cdd;
+  }
+  
+  em {
+    color: #566;
+  }
+  
+  #interview_page h4{
+    background: #cdd;
+    padding: 8px;
+    color: #566;
+  }
+</style>
+
+ <script type="text/javascript">
+    $(window).load(function () {
+
+        $("#interview_page a").each(function(i, e){
+          $("#mentioned_links").append("<li><a href='"+$(e).attr("href")  +"'>" + $(e).html() + "</a></li>");
+        });
+      
+    });
+  </script>
+
+<div id="content" class="span-14">
+
+  <div id="interview_page">
+    <div class="page-header">
+      <h2>{{ page.title }} <small>{{ page.tagline }}</small></h2>
+    </div>
+    
+    {{ content }}
+  
+  </div>
+</div>
+<div id="sidebar" class="span-4 push-1">
+  <h4>
+    Mentioned Links
+  </h4>
+  <ul id="mentioned_links">
+
+  </ul>
+</div>

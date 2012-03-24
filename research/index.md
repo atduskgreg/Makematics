@@ -26,11 +26,27 @@ _This is a technique for estimating the pose of an object from a single image. I
 
 ### [Screen Space Ambient Occlusion](/research/ssao)
 
+![screen space ambient occlusion](http://upload.wikimedia.org/wikipedia/commons/8/8b/Screen_space_ambient_occlusion.jpg)
+
+_This is a technique that produces realistic lighting and reflection in 3D renders in real time. It is implemented in a pixel shader. There is working, but messy, OpenFrameworks code._
+
 ### [Random Sample Consensus (RANSAC)](/research/ransac)
 
 ![RANSAC plane fitting](http://www.mrpt.org/sites/default/files/images/Ransac_example_3D_plane_0.png)
 
-_RANSAC is an method for fitting lines and planes to observed data. In a world with a lot of point clouds, it seems like it might be useful for extracting simplified geometry from rich but noisy 3D scans._
+_RANSAC is an method for fitting lines and planes to observed data. In a world with a lot of point clouds, it seems like it might be useful for extracting simplified geometry from rich but noisy 3D scans. There are a number of viable implementations around including a partial one in OpenFrameworks._
+
+### [GigaVoxels](/research/gigavoxels)
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/HScYuRhgEJw" frameborder="0" allowfullscreen></iframe>
+
+_This is a very sophisticated technique for rendering large volumetric data sets. It can display billions of voxels in real time._
+
+### [Mipmapping](/research/mipmapping)
+
+![Mipmapping texture](http://upload.wikimedia.org/wikipedia/commons/5/5c/MipMap_Example_STS101.jpg)
+
+_This is a technique for combining multiple sizes of the same texture to do efficient rendering at multiple levels of detail from way zoomed out to up-close._
 
 ## Math Concepts
 

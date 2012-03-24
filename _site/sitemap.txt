@@ -1,15 +1,20 @@
 
-http://username.github.com/archive.html
-http://username.github.com/atom.xml
-http://username.github.com/categories.html
-http://username.github.com/index.html
-http://username.github.com/pages.html
-http://username.github.com/research/dfd/index.html
-http://username.github.com/research/index.html
-http://username.github.com/research/posit/index.html
-http://username.github.com/research/ransac/index.html
-http://username.github.com/research/watercolor/index.html
-http://username.github.com/sitemap.txt
-http://username.github.com/tags.html
+http://makematics.com/archive.html
+http://makematics.com/atom.xml
+http://makematics.com/categories.html
+http://makematics.com/index.html
+http://makematics.com/pages.html
+http://makematics.com/research/dfd/index.html
+http://makematics.com/research/facetracker/index.html
+http://makematics.com/research/gigavoxels/index.html
+http://makematics.com/research/haar_detection/index.html
+http://makematics.com/research/index.html
+http://makematics.com/research/mipmapping/index.html
+http://makematics.com/research/posit/index.html
+http://makematics.com/research/ransac/index.html
+http://makematics.com/research/ssao/index.html
+http://makematics.com/research/watercolor/index.html
+http://makematics.com/sitemap.txt
+http://makematics.com/tags.html
 
-http://username.github.com/lessons/2011/12/29/jekyll-introduction
+http://makematics.com/2012/03/23/math-for-makers

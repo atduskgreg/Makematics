@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kyle McDonald Explains FaceTracker</title>
+    
+    <meta name="author" content="Greg Borenstein">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <!--[if lt IE 9]>
+    <![endif]-->
+        <link href="/assets/css/blueprint/ie.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le styles -->
+    <link href="/assets/css/blueprint/screen.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style>
+      body{
+        font-size: 100%;
+        line-height: 1.5;
+        background-color: #dee;
+      }
+
+      #header {
+        margin-bottom: 3em;
+      }
+      
+      h1 a{
+        text-decoration: none;
+        color: #eff;
+        background: #566;
+                
+      }
+      
+      h1 a:hover{
+        color: #eff;
+
+      }
+      
+      h1 {
+        font-size: 32px;
+        border-bottom: 4px solid #566;
+      }
+      
+      
+      a{
+                text-decoration: none;
+      }
+      
+      a:hover{
+                text-decoration: underline;
+
+      }
+      
+      h2 a {
+        font-weight: bold;
+        color: #566;
+      }
+
+      h2 a:hover{
+        color: #566;
+      }
+
+      h2 {
+          font-weight: bold;
+        color: #566;
+      }
+     
+      
+      #sidebar {
+        border-left: 1px solid #cdd;
+        padding-left: 9px;
+        margin-top: 160px;
+      }
+      
+      #sidebar a {
+        color: #566;
+      }
+      
+      #sidebar ul {
+        color: #566;
+                padding-left: 5px;
+
+      }
+      #sidebar li {
+        margin-bottom: 16px;
+        list-style-type: none;
+      }
+
+
+      #footer {
+        border-top: 2px solid #cdd;
+        text-align: center;
+        font-style: italic;
+        color: #566;
+        padding-top: 1em;
+        font-size: 75%;
+      }
+
+      .footer-divider{
+        color: #cdd;
+
+      }
+      
+    </style>
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  
+
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div id="header" class="span-20 push-2">
+          <h1 style="color:orange"><a href="/">Makematics</a></h1>
+      
+      </div>
+
+      <div id="content-wrapper" class="span-20  push-2">
+        
+<style>
+  img {
+    border: 1px solid #cdd;
+  }
+  
+  em {
+    color: #566;
+  }
+  
+  #interview_page h4{
+    background: #cdd;
+    padding: 8px;
+    color: #566;
+  }
+</style>
+
+ <script type="text/javascript">
+    $(window).load(function () {
+
+        $("#interview_page a").each(function(i, e){
+          $("#mentioned_links").append("<li><a href='"+$(e).attr("href")  +"'>" + $(e).html() + "</a></li>");
+        });
+      
+    });
+  </script>
+
+<div id="content" class="span-14">
+
+  <div id="interview_page">
+    <div class="page-header">
+      <h2>Kyle McDonald Explains FaceTracker <small></small></h2>
+    </div>
+    
+    
+
+<p><iframe src="http://player.vimeo.com/video/39034692" width="500" height="331" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
+
+
+<p><em><a href="http://kylemcdonald.net/">Kyle McDonald</a> is an artist and researcher in New York with a background in computer science and philosophy. In October 2011, he released <a href="https://vimeo.com/26098366">FaceOSC</a>, a tool for prototyping face-based interaction. FaceOSC was based on the work of <a href="http://web.mac.com/jsaragih">Jason Saragih</a>, a research scientist at CSIRO. In addition to FaceOSC, Kyle has produced <a href="http://github.com/kylemcdonald/ofxfacetracker">an addon for working with face tracking in OpenFrameworks</a> as well as a growing body of work that uses face tracking in an artistic context, notably <a href="https://vimeo.com/29348533">Face Substitution</a> with Arturo Castro.</em></p>
+
+<p><em>I interviewed Kyle about FaceTracker on March 20, 2012. I asked him to explain how the FaceTracker algorithm works. We started the conversation by talking about his prior experience with face tracking and how he first came across Saragih&rsquo;s work.</em></p>
+
+<h4>Transcript</h4>
+
+<p><em>Hi Kyle.</em></p>
+
+<p>Hey, what&rsquo;s up Greg?</p>
+
+<p><em>How&rsquo;s it going?</em></p>
+
+<p>I&rsquo;m pretty good.</p>
+
+<p><em>Good. So I wanted to ask you a little bit about FaceTracker.</em></p>
+
+<p>Ok.</p>
+
+<p><em>So first of all how did you hear about it in the first place? How did you discover Jason&rsquo;s work and how did you come across it?</em></p>
+
+<p>I think it was from this guy <a href="http://pkmital.com/home/">Parag Mital</a>, who&rsquo;s another interactive artist, and he&rsquo;s always exploring really crazy high level algorithms and taking code from one researcher and then wrapping it up and trying to figure out how to use it in an arts context. I think he was the first person I saw using FaceTracker and he was also testing another library called AAMLib, which is based on <a href="http://opencv.willowgarage.com/wiki/">OpenCV</a>, but it does something similar &ndash; it&rsquo;s just really slow and not as accurate. So I think it was from him. He was doing some research with face tracking.</p>
+
+<p><em>So you saw him actually using the code that Jason had released?</em></p>
+
+<p>Yeah, exactly. Well I don&rsquo;t know if he had it finished into a piece yet. I think he was just doing some experiments with it, and I forget even what the experiments were. I don&rsquo;t know. I&rsquo;m gonna look it up, actually.</p>
+
+<p><em>Yeah, go for it. I&rsquo;m really curious, like what that &ndash; I think a lot of people the first moment they see the results of FaceTracker as pretty striking so I&rsquo;m curious as to what your experience was at that moment.</em></p>
+
+<p>Yeah, so Parag &ndash; going to <a href="https://vimeo.com/pkmital">his Vimeo</a>. So maybe it was &ndash; maybe it was this one, like 9 months ago or something. Is this it? Let&rsquo;s see&hellip; Nah, it was &ndash; it must have been longer than that. &hellip; Well, definitely this one.</p>
+
+<p><em><a href="https://vimeo.com/16946940">6 DOF Head Tracking</a></em></p>
+
+<iframe src="http://player.vimeo.com/video/16946940" width="500" height="369" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p>But I don&rsquo;t think &ndash; I don&rsquo;t know if this one is actually using FaceTracker. Oh, this one is using <a href="http://www.seeingmachines.com/product/faceapi/">Face API</a>. So FaceAPI is a commercial version of FaceTracker but written by completely different people, and it&rsquo;s been around for much longer and only recently did they allow it to be used for noncommercial products &mdash; used for free for noncommercial projects. Before that you used to have to contact them even if it was noncommercial and try and get a copy and license it from them. So he was using that. So that was like a year ago. And then it looks like a little later: so this is 9 months ago [<em>referring to <a href="https://vimeo.com/24395125">this video</a></em>].  So then he says &ldquo;using Jason Saragih&rsquo;s FaceTracker code&rdquo;. And you can see he has lots of low level stuff he&rsquo;s doing already. There&rsquo;s &ldquo;load an existing AAM model,&rdquo; &ldquo;reinitialize the FaceTracker,&rdquo; &ldquo;train an AAM model,&rdquo;.</p>
+
+<p>So he&rsquo;s doing some extra stuff on top of what Jason was already doing, and then his <a href="https://vimeo.com/24409802">next video</a> is actually, in a way, really similar to what Arturo and I did much later.</p>
+
+<iframe src="http://player.vimeo.com/video/24409802" width="500" height="369" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p>He was reprojecting his own face back onto his tracked face. So I think he was taking the trained model &mdash; the trained appearance model &mdash; and then drawing that on top of his face from the current estimated parameters. So he was doing <a href="http://en.wikipedia.org/wiki/Active_appearance_model">Active Appearance Modeling</a> instead of Jason&rsquo;s just <a href="http://en.wikipedia.org/wiki/Active_shape_model">Active Shape Modeling</a>, ASM. And so one of the differences between those two is that Active Shape Modeling is just about getting these contours and it&rsquo;s based on the landmarks, which are these little patches of the face that you&rsquo;re tracking. But, if you want to do Active Appearance Modeling then you start to take into account all of that information between the landmarks. So it&rsquo;s more like instead of having little patches you have a full texture map that you&rsquo;re trying to map and you deforming the texture map. So, Parag was already going one step further by not just using Jason&rsquo;s code by itself but actually using it with AAM and doing complete texture deformation. So, I think this the first place that I saw Jason&rsquo;s stuff being used.</p>
+
+<p><em>So then what was your next step? Did you get in touch with him or did you&hellip;?</em></p>
+
+<p>Yeah, I got super excited (laughs) and I think I heard about it, I mean I follow Parag&rsquo;s stuff but I think <a href="http://thesystemis.com">Zach Lieberman</a> actually sent it to me and I was like, &ldquo;Oh, I have to play with this! Do you have Jason&rsquo;s e-mail?&rdquo; and I was looking around and then I found it buried on Jason&rsquo;s webpage. I sent an e-mail and then Jason very kindly sent the code back. I think Parag had a wrapper at the time already for FaceTracker, he had an example of it working with Open Frameworks, but it was really minimal and it was just taking the code that Jason provided and just throwing it into OF. So when Jason sends the code to people he sends a demo application that you can compile and run from the command line.</p>
+
+<p>And if you can read through it you can see what it&rsquo;s doing and you can make guesses as to how you would do the same thing in the OF app. And Parag basically did that. He took this demo code from Jason and then threw it into OF and instead of having it run through command line he was feeding it stuff from the OF camera and the getting the data back into OF. So it worked and you could see the results and start doing stuff since it was in OF. But the more that I read through the code and as I started reading Jason&rsquo;s paper I realized there was a lot of higher level stuff you could do with the library. But you had to know where to look for that. So for example, orientation &mdash; the direction that your head is facing &mdash; there is one matrix hidden deep within Jason&rsquo;s code where if you extract the values from that matrix you can get the head orientation. But Parag wasn&rsquo;t wrapping that as he didn&rsquo;t quite know where to find it. I talked a lot with Jason and I asked what are the different meanings of the different matrices and how can I use them. And then I wrapped them in a way that was more useful so people didn&rsquo;t have to dig through Jason&rsquo;s code they could just see a function that was called &lsquo;getOrientation()&rsquo; or something like that. So yeah, Parag initially had a very basic wrapper that got me kickstarted on my way but then I took a completely different direction by creating a full-featured addon.</p>
+
+<p><em>So did you know about ASM and AAM and this field of face tracking before that?</em></p>
+
+<p>Yeah a little bit. One the first times I was exposed to it was working on a project with <a href="http://theowatson.com/">Theo Watson</a> called <a href="http://www.theowatson.com/site_docs/work.php?id=43">Portrait Machine</a>. And we were doing high level analysis of people&rsquo;s faces: things about skin color and the shape of their forehead as far as where their hair meets the forehead and the shape of that and what color clothing they were wearing and whether it was patterned clothing or just a solid color, whether they were tall or short, if they were tilting their head one way or another. So we were doing all types of analysis on these images and we wanted to get more information about their facial expressions as well. We had a library that let us do smile detection, it told us how much someone was smiling, but that was it. So we looked into looking into using AAM with one of these older libraries before Jason&rsquo;s FaceTracker. And it was the kind of thing where if you wanted to do a reasonably-sized image something like 320 by 240 it took like 2 seconds to process the image and it kind of worked, but it could get really messed up, like the face could get tracked really poorly and it wasn&rsquo;t very robust to different lighting situations. Jason has a lot of novel features with the way he wrote his code that makes it more robust to different lighting and that was really important fro what Theo and I were doing. So in the end we weren&rsquo;t able to use this other code for that project so we just done everything by hand with <a href="http://en.wikipedia.org/wiki/Haar-like_features">Haar</a> face detection instead.</p>
+
+<p><em>So at that point you thought that you wanted to do more face tracking than just smile tracking and that was when you started searching around to see what research had been done in that regard. And that was when you came across AAM and ASM?</em></p>
+
+<p>Right exactly, yeah yeah yeah. So Theo already knew about the smile detection stuff and we thought &lsquo;oh that&rsquo;s great&rsquo; but maybe we can get some more things like how much the eyebrows are raised. With OpenCV you can use Haar detection to just find maybe the eye. But then analyzing an eye to find out how high the eyebrow is raised isn&rsquo;t really trivial because everyone has different face-shapes and different eyebrow colors. So it&rsquo;s not easy to do it by hand. You would need to re-implement this for each feature. If you want to see how big or how open or closed the eyes are, how high or low the eyebrows are or how wide or narrow the mouth is you would have to write really specific code for each of these things. And we did for a few of them but we were hoping to find something that would do that for us and that&rsquo;s when we found AAM and ASM. But it was just to slow at the time and there were no good implementations that we could use. We were looking into using FaceAPI actually but they they wanted an unreasonable amount of money for that.</p>
+
+<p><em>So then when you got Jason&rsquo;s code, did you also get his research? Like, his paper that he published about it? When did you start looking at that?</em></p>
+
+<p>Yeah. So the first thing that I got from him was just the code. And then I asked him, I think, a few days later. I was like, &ldquo;Hey, can I get a copy of the paper that went with this?&rdquo; (<a href="http://www.springerlink.com/content/n6vn3r6178181260/">Deformable Model Fitting by Regularized Landmark Mean-Shift</a> &mdash; ed.) Because normally those kind of scientific papers are published in journals where the journal makes a lot of their money based on the fact that people are subscribed to the journal through the institution or through people individually paying for articles. I think I had just finished school so I wasn&rsquo;t associated with any institution at the time and I didn&rsquo;t have an easy way of getting access to the article and I didn&rsquo;t feel like spending forty dollars or whatever on a few pieces of paper. So I just sent Jason an email and he sent it over to me and we could talk about it a little more and I could ask him questions about what&rsquo;s going on in there.</p>
+
+<p><em>So that helped in figuring out the code as well as understanding the algorithm and how it&rsquo;s working?</em></p>
+
+<p>Yeah, definitely. One of the things that the paper really helped with is understanding the failure modes of the algorithm, like knowing when to expect it to break. Because I got a feeling from playing with it, but knowing what Jason thought was the problem with it was a totally different experience because then I could look at it and try to set up that situation that was a failure and then I don&rsquo;t just see the failure but I also understand why it exists and that influences the way I use the algorithm after that. And then sometimes you design things for that as well, sometimes you design things to actually take advantage of that rather than just avoid it. So when you were doing stuff with the <a href="http://urbanhonking.com/ideasfordozens/2012/01/14/machine-pareidolia-hello-little-fella-meets-facetracker/">pareidolia experiments</a>, that&rsquo;s taking advantage of the failure mode of the algorithm instead of working around it.</p>
+
+<p><em>Will you talk about those failure modes a little bit?</em></p>
+
+<p>Yeah. With FaceTracker it&rsquo;s so much based on lighting differences in little areas or just color differences in little areas depending on how you think about it. Like with their eyebrow it&rsquo;s just a color difference because their eyebrows are generally darker than the skin, but with this part of your face [<em>under the chin</em>] then it&rsquo;s a lighting difference because there&rsquo;s a shadow beneath here and not here. So if you had really unusual lighting, like someone had a flashlight beneath their face and that was the only light in the room, that would be so strange &mdash; I don&rsquo;t know, I&rsquo;ll have to try it sometime &mdash; but that&rsquo;s something I would expect to cause a problem.</p>
+
+<p>You can also have a problem if you have really directional light that casts really harsh shadows and then the FaceTracker might think that the edge of a shadow is the edge of a feature. Like here [<em>indicates his jawline</em>] where it transitions from light to dark the FaceTracker says, &ldquo;Oh, there&rsquo;s an edge there. There&rsquo;s something I can track there.&rdquo; But if you get that transition somewhere else because of a shadow, then that&rsquo;s going to make a bad guess about that.</p>
+
+<p><a href="http://www.flong.com/">Golan Levin</a> has a funny experience with the FaceTracker because his beard is turning grey here [<em>chin</em>] and not over here[<em>cheek</em>] &mdash; or maybe it&rsquo;s the inverse, I can&rsquo;t remember &mdash; and so it kind of looks to the FaceTracker like a really weird lighting situation and it will end up bringing his chin up to here [<em>just below his lower lip</em>] all the time.</p>
+
+<p>And a big reason that these failure modes exist is because of the dataset that Jason trains the library on. There&rsquo;s this dataset from <a href="http://www.cmu.edu/index.shtml">CMU</a> called the <a href="http://www.multipie.org/">Multi-PIE database</a>. It&rsquo;s just a huge collection of, I think, tens of thousands or hundreds of thousands of images of faces that are all marked up with information about where the face is and where the features are. And the way FaceTracker works is that Jason didn&rsquo;t just write code to detect things, but he wrote code to train those detectors on this database. So the things that FaceTracker is detecting are based on things that it saw in the Multi-PIE database. And the Mulit-PIE database is constrained to real world situations. So it represents, on average, the real world because it&rsquo;s taken in a lot of different conditions. And it&rsquo;s not like it&rsquo;s pictures of people with a flashlight beneath their face. It&rsquo;s people in daylight, people indoors with lighting above. Because of that, that&rsquo;s what FaceTracker is best suited for tracking &mdash; because it&rsquo;s been trained to those situations. So when you start to get situations that are really unusual lighting or just really unusual facial features then it starts to have problems with that but because on the other hand it was trained in lots of normal lighting scenarios: indoors with above lightings, outdoors with overcast, outdoors with directional lighting then all of those situations work kind of OK.</p>
+
+<p><em>Maybe that&rsquo;s a good transition to actually start talking about how the algorithm works. Since we&rsquo;re talking about the learning behind it. So I think let&rsquo;s do what we were doing before: starting to go through the abstract and have you talk us through that little by little might be a good starting point for that.</em></p>
+
+<p>Yeah. Definitely. So <a href="http://www.springerlink.com/content/n6vn3r6178181260/">this</a> is the paper from Jason. I mean he is written a few papers on this but this is a really nice one explaining the core of FaceRracker and how that library works. The paper is called &ldquo;Deformable Model Fitting via Regularized Landmark Mean Shift&rdquo;. The title itself is kind of quite a bundle that words but we can actually unpack this a little bit. So we know what &ldquo;deformable&rdquo; means. Deformable means it can kind of be twisted and pushed around. &ldquo;Model fitting&rdquo;? That&rsquo;s the process of taking something that is a form or something or that&rsquo;s perfect in some way, whether it&rsquo;s a mask of someone&rsquo;s face or whether it&rsquo;s an equation describing some curve, those are all models of something. A manikin would be also kind of a model, a perfected form that represents the human body. So, deformable model fitting is something like taking a form of the face and then squishing it until it fits some target, in this case its a photo that you feed in or a camera feed.</p>
+
+<p>And then he says, &ldquo;by regularized landmark mean shift&rdquo;. So, this is the technique that&rsquo;s being used for doing this. Deformable model fitting <em>using</em> regularized landmark mean shift. Well first of all &ldquo;landmark&rdquo;: that&rsquo;s what I was talking about earlier with all little patches. All of the different points on the face are being detected using little patches of the image. It&rsquo;s not analyzing the whole thing and then instantly understanding how the face exist there, it analyses lots of little portions. I don&rsquo;t understand what &ldquo;regularized&rdquo; means. I have to read the paper more thoroughly again. And &ldquo;mean shift&rdquo; is referring to this algorithm called mean shift which has to do with making iterative refinements to estimations. So mean shift might be something like &mdash; What&rsquo;s that game where you throw the balls and then who ever gets closest&hellip;</p>
+
+<p><em>Bocci ball?</em></p>
+
+<p>Yeah, bocci ball. So mean shift is kind of like bocci ball except&hellip;No-no-no. Even better! It&rsquo;s like &hellip;curling. It&rsquo;s like curling. So, mean shift is like curling. You throw it in generally the right direction and then everyone is trying to make up for little inconsistencies along the way. Mean shift is just that idea. Making an initial guess like throwing the whatever, whatever it&rsquo;s called in curling</p>
+
+<p><em>The iron?</em></p>
+
+<p>Yeah. Throwing the iron or whatever it is. The stone yeah-yeah, the stone. So, you make this initial guess and then you make some estimation about the direction that you really wanted to be going or where you really want to land and then you just remove it a little bit. And the reason you do that with curling is because you can&rsquo;t throw it the whole way, right? It would be impossible. It&rsquo;s way too hard. The reason you do it here is because you actually don&rsquo;t know your answer in advance just by looking at the image but you have a general sense of &lsquo;maybe there is something here that matches up with this feature I am looking for and it&rsquo;s part of the same face that has a feature over here so maybe we can use those things to inform each other about the overall structure and individual positions of where things are&rsquo;. So mean shift just means that iterative refinement of things.</p>
+
+<p>So, again. &ldquo;Deformable model fitting&rdquo;: that&rsquo;s squishing something around using these little features that are moved around a little bit. And the mean shift is actually related to the deformation [<em>the mean shift is how the model is deformed &mdash; ed.</em>].</p>
+
+<p>And then abstract is a massive bundle of words. It makes more sense to actually read through the whole paper first and then it go back to the abstract and be like &ldquo;Oh! I get it now.&rdquo; Because when you read the abstract the first time if you&rsquo;re not familiar with the terminology then it can be kind of overwhelming. I mean if you just pick a random section here it will say something like: &ldquo;in this work a principled optimization strategy is proposed where non-parametric representations of these likelihoods are maximized within a hierarchy of smoothed estimates.&rdquo; What?!? That was at least like, seven terms there that maybe I&rsquo;m not familiar with. I definitely still don&rsquo;t know some of those terms. But when you read through the whole thing instead of just the abstract, then you can start to get a feeling for what&rsquo;s going on. The only scientific papers I feel like I really understand are some of the ones around 3D scanning because I&rsquo;ve read each of them five or six times and I&rsquo;ve read a lot of them. I haven&rsquo;t just read one paper, I&rsquo;ve read other papers that are on the same topic. This is one of the only face tracking papers I&rsquo;ve read. I&rsquo;ve read a more general description of how it works, but a lot of these terms I&rsquo;m not familiar with because I&rsquo;ve never implemented it myself and I haven&rsquo;t seen them show up in places.</p>
+
+<p>But if we just go through the beginning of the introduction. He starts off and he says &ldquo;Deformable model fitting is the problem of registering&rdquo; &mdash; there we&rsquo;re already at this weird phrase.  So, &ldquo;registering&rdquo;. All of these words are like super technical words, but they&rsquo;re technical not because, anyone&rsquo;s trying to confuse anyone else, but just because they have a very specific meaning that they want to communicate. And when you say &ldquo;registering&rdquo;, all he really means is &lsquo;lining up&rsquo;. If I have two things that are not aligned and I do this [<em>brings to separate hands together to form a vertical line</em>], then they&rsquo;re registered now. But &ldquo;registering&rdquo;, that word, has this huge history of image registration and all these other kinds of registration. So when a scientist reads that word and says &ldquo;Ahh, registering&hellip;&rdquo;, they immediately have this image not just of lining something up of all the research that has been done about image registration in the past and other kinds of registration.</p>
+
+<p>So &ldquo;deformable model fitting is the problem of registration&rdquo; &mdash; or lining up &mdash; &ldquo;a parameterized shape model&rdquo;. And again there&rsquo;s a bunch of stuff in here that I&rsquo;m not super familiar with. So when he says &ldquo;parameterized&rdquo;? Parameters: you can think of them as knobs. But when he says &ldquo;parameterized shape model&rdquo; I think what he&rsquo;s saying is that you have this mask, this model, and there&rsquo;s different ways of deforming it. You can think of each of those deformations as like a knob, and those knobs are the parameters. So maybe if I go like this [<em>opens mouth</em>], then that&rsquo;s one kind of parameter.  It&rsquo;s one kind of deformation. So he doesn&rsquo;t just have a shape model, he doesn&rsquo;t just have a mask, but he actually has knowledge about the ways in which that mask deforms. So, if I just had the mask, then I could take it in my hand and twist it in random directions, but our face doesn&rsquo;t really do anything. Our face actually just does a few things. It does this [<em>raises eyebrows</em>] and it does this [<em>lowers jaw</em>], and it does this [<em>smiles</em>], and that&rsquo;s it. So, when he said &ldquo;parameterized&rdquo;, I&rsquo;m pretty sure that&rsquo;s what he&rsquo;s talking about.</p>
+
+<p><em>So that deformable model is actually a 3D model of a face?</em></p>
+
+<p>Right. So it&rsquo;s a 3D model of a face and it looks something like <a href="http://www.flickr.com/photos/unavoidablegrain/7009271953/in/photostream">this</a>.</p>
+
+<p><img src="http://farm8.staticflickr.com/7128/7009271953_13bedc5a0e_z_d.jpg" alt="FaceTracker reference 3D model" /></p>
+
+<p>And you can see, it kind of matches up with what you would expect, but it&rsquo;s kind of weird in some ways. It looks weirdly elongated. This [<em>the model&rsquo;s cheeks</em>] should be out more, right along here, this [<em>the model&rsquo;s right cheekbone</em>] should be protruding more, but because it&rsquo;s not important, there&rsquo;s no features here to track, so there&rsquo;s no reason for the 3D model to represent that. All of the points here are in a good place, but the overall structure can be strange sometimes. Also here across the nose, it makes it look like there&rsquo;s a giant triangle right here. But again, that&rsquo;s because there&rsquo;s no features to track there. So there&rsquo;s kind of this thing inside FaceTracker and he talks about it. This is the model. It s a bunch of triangles and there&rsquo;s a point for all of these triangles.  http://www.flickr.com/photos/unavoidablegrain/6863156094/in/photostream/)_]</p>
+
+<p><img src="http://farm8.staticflickr.com/7105/6863156094_07684972fd_z_d.jpg" alt="FaceTracker reference 3D model in wireframe" /></p>
+
+<p>This is the model. It&rsquo;s made up of a bunch of triangles. And when he says &ldquo;deformable&rdquo;, he&rsquo;s just saying that it&rsquo;s not a fixed mask that we&rsquo;re moving and orienting, but it&rsquo;s a stretchy mask that we&rsquo;re stretching in different ways. And when he says &ldquo;parameters&rdquo;, that we have parametric control, or it&rsquo;s a &ldquo;parameterized&rdquo; shape model, that means that it&rsquo;s not just deforming in arbitrary ways, but there&rsquo;s very specific ways in which it deforms.  Among the things like the mouth moving.</p>
+
+<p>So then he says, &ldquo;registering a parameterized shape model to an image&hellip;&rdquo; (something like a camera image) &ldquo;&hellip;such that its landmarks&rdquo; (the landmarks of the shape model) And there are landmarks kind of around each of these points, and that&rsquo;s like a little patch of the image that we&rsquo;re looking at. The landmarks correspond to &ldquo;consistent locations&rdquo;. So these landmarks from the face model correspond to the same point on the input image. When he says &ldquo;consistent locations&rdquo; that&rsquo;s all it means. &ldquo;&hellip;on the object of interest&rdquo;: so the object in the image. So this whole sentence is the description of, well he says it&rsquo;s &ldquo;the problem&rdquo;. &ldquo;Deformable model fitting&rdquo; is the problem of doing this, which weird because he&rsquo;s also describing what the solution is. This is what&rsquo;s happening. So this is not the first paper like this about deformable model fitting and what he&rsquo;s saying is there&rsquo;s a whole class of things that people do called deformable model fitting and this is generally how they work. Then the rest of the paper is him going through his solution for that problem, which is the best way of accomplishing this kind of model fitting.</p>
+
+<p>Again, it&rsquo;s similar to how some other algorithms work. So, I&rsquo;ll go on just a little more. He says, &ldquo;It&rsquo;s a difficult problem,&rdquo; this whole thing of figuring out how this mask fits on someone&rsquo;s face, &ldquo;it&rsquo;s a difficult problem as it involves an optimization in high dimensions.&rdquo; So that&rsquo;s another really weird phrase &mdash; optimization in high dimensions. Optimization is just a scientific way of saying getting something right. So, if you have a paper that you&rsquo;re writing for a class and you&rsquo;re making it better and better, you could say you&rsquo;re optimizing it. If you have a car that isn&rsquo;t running at quite the right miles per gallon and you tweak some things then you&rsquo;re optimizing it. When you have a model of a face that you&rsquo;re fitting and it&rsquo;s kind of misaligned then you want to make it fit a little better, and that would be optimizing the match. When he says &ldquo;high dimensions&rdquo; what that means is that there&rsquo;s a lot of knobs to tweak. If all I was optimizing was the position of my mouse on the screen and the optimal position of my mouse on the screen would be right on the nose, then I would move my mouse slowly and now it&rsquo;s optomized. The position of my mouse is optimized to be on the nose.</p>
+
+<p>That&rsquo;s only two dimensions. I&rsquo;m moving my mouse in two dimensions in an X-axis and a Y-axis. If I want to do something more complicated like optimize this [<em>indicating the default 3D model that comes with FaceTracker, which is on screen</em>] towards having the face facing perfectly right and zoomed in so that it expands to fit the whole screen, then I already have three dimensions for rotation that I&rsquo;m talking about. [<em>rotates the model</em>] That&rsquo;s kind of facing right. And then I have another dimension for zoom and I can get it to do what I was going for. So it&rsquo;s now four dimensions we&rsquo;re talking about. But, something like fitting a face when he says &ldquo;high dimensions&rdquo; he&rsquo;s talking about a ton of dimensions, not just two or four or something like that but actually each one of these points is a two-dimensional point and it has to move all of those points. They can&rsquo;t really move completely independently but that&rsquo;s about the order of magnitude of the dimensionality problem, that&rsquo;s about how many knobs there are.</p>
+
+<p>So again, when I&rsquo;m moving my mouse, there&rsquo;s kind of like two knobs, there&rsquo;s the X and the Y. Then when I&rsquo;m doing something like positioning the face, there&rsquo;s only like three or four knobs for the orientation and the zoom. When I&rsquo;m doing something like face fitting, there&rsquo;s like hundreds of knobs, because there&rsquo;s 66 points in the model and each point has two values, or three values depending on how things are organized. So there&rsquo;s a lot of the knobs to tweak to get the face to fit correctly. When you have a more knobs to tweak, the problem is generally harder to solve. So he says it&rsquo;s a difficult problem as it involves optimization &mdash; solving a problem in high dimensions. So, it&rsquo;s a difficult problem because there&rsquo;s a lot of knobs to tweak.</p>
+
+<p>&ldquo;Appearance can vary greatly between instances of the object&rdquo; &mdash; the object being the face [<em>laughs</em>] it&rsquo;s really funny language. &ldquo;Appearance&rdquo; can vary greatly, so the way that a face looks to a camera can really be different &ldquo;due to lighting conditions, image noise, resolution, and intrinsic sources of variability&rdquo;, which probably means something like some people have beards.</p>
+
+<p>And so, even here, there&rsquo;s some scientific language, like &ldquo;intrinsic sources of variability&rdquo;. &ldquo;Variability&rdquo; means something like &lsquo;there&rsquo;s differences from one case to another&rsquo;, but &ldquo;intrinsic sources&rdquo; can have a lot of different meanings. It could be something like just because of the way the object is (like just because someone happens to have a beard) or it could mean something like, maybe cameras are generally distorted in some way, and that&rsquo;s an intrinsic source of variability. So there&rsquo;s a lot of knobs to tweak for one, but not only are there a lot of knobs to tweak, but we&rsquo;re not even sure all the time what we&rsquo;re optimizing towards. We&rsquo;re not always sure what the goal we&rsquo;re getting towards is supposed to be.</p>
+
+<p>If you put yourself in the computer&rsquo;s mindset for a second, you have to imagine that you&rsquo;ve just been given a face of someone from the middle of Papua New Guinea who is decked out in all of these decorations on their face. Then someone asks you to draw an outline of what you think their face is and they say, &ldquo;One, put lines on where their eyebrows are. Two, put lines on where their chin is. Three, put a line on where their nose is.&rdquo; You get this image and you&rsquo;re like, &ldquo;Well, what am I supposed to do? This nose doesn&rsquo;t look like any other nose I&rsquo;ve seen before. What I&rsquo;m supposed to do with this chin, because it doesn&rsquo;t look like any other chin I&rsquo;ve seen before. And I don&rsquo;t think this person even has eyebrows.&rdquo; The computer is going through that experience with every single face you give it, because it&rsquo;s kind of seen a lot of faces from the database that it was trained on. Still, it&rsquo;s never seen the face that you&rsquo;re giving it right now, and the face that you&rsquo;re giving it can change in a lot of different ways. Like he says, the ways that it can change are the things like lighting or image noise or having a beard or not having a beard. So, there&rsquo;s a lot of issues involved here.</p>
+
+<p><em>How does it compare individual features in the image that it&rsquo;s seeing? How does it look through the image in order to find parts of the image that match those features?</em></p>
+
+<p>So now we&rsquo;re getting into how the algorithm actually works. So far he&rsquo;s just framed the general problem which is that we want to fit this model to the face. And he said why it&rsquo;s difficult. So now to get into actually how to solve it, one of the first steps is you go through and one of the first steps you do is what&rsquo;s called a Haar face detection [<em>also known as Viola-Jones face detection after the authors of</em> <a href="http://research.microsoft.com/en-us/um/people/viola/Pubs/Detect/violaJones_IJCV.pdf">the original paper</a>]. And Haar detection is kind of a classic face detection technique. There are some people you can talk to more about Haar face detection [<em>See our <a href="/research/haar_detection">interview with Adam Harvey</a></em>]. But the basic idea with Haar detection is that you decompose the image into just light and dark regions and then you look for a comparison between the light and dark regions. So, in general if you have a face, then the face has a darker area here [<em>indicating below the chin</em>] and darker areas here [<em>indicating the eyes</em>] and some dark area here [<em>indicating the temples</em>] and they&rsquo;re all arranged &ndash; maybe a dark area here [<em>indicating the mouth</em>] &ndash; and they&rsquo;re all kind of arranged in this manner.</p>
+
+<p>So all Haar detection is doing is trying to find some area of an image that matches that collection of bright and dark regions. So everything that&rsquo;s not dark that I mentioned is probably bright &mdash; the cheeks are bright and the forehead is bright. And this can be a problem actually. This algorithm can be a problem if you&rsquo;re dealing with people who have like darker skin for example because it was designed by white and Asian researchers. The algorithm has to make assumptions about the relative brightness of different features. So if there&rsquo;s a light above you, then there&rsquo;s going to be a dark spot in your eye because it&rsquo;s a shadow being cast, but not here [<em>indicating cheek</em>] because there&rsquo;s no shadow being cast. If you have light skin it&rsquo;s really easy to see that difference, but if you have darker skin then it can be harder to see that distinction. So you also have to do just some kind of preprocessing on the image in order to get a good result. You want to do what&rsquo;s called <a href="http://en.wikipedia.org/wiki/Histogram_equalization">image histogram equalization</a> first and Jason is doing that in his code. He does histogram equalization which makes it so that people with all different skin tones have the same relative differences so that shadows pop out a lot. Once you&rsquo;ve done the histogram equalization, then you can run the Haar detector and it will tell you, &ldquo;Hey, I just found this area of the image that has something that looks kind of face like, it has the dark and light spots in the right places.&rdquo;</p>
+
+<p>So the Haar detector assumes that your face is oriented like this [<em>vertical with good posture</em>], kind of straight and straight and straight and if I&rsquo;m like this [<em>tilts head to the side</em>] then the Haar detector can&rsquo;t see me, and if I&rsquo;m like this [<em>tilts head back</em>] the Haar detector has trouble seeing me. And if I do something like this [<em>covers right eye with right hand</em>] it definitely can&rsquo;t see me, if I just cover up half my face it has no idea because it needs all of those things to be there. One way of talking about it is it&rsquo;s a holistic approach. Jason uses the word &ldquo;holistic&rdquo; in the paper to refer to something else but I&rsquo;ll say this is a kind of holistic approach with Haar detection. So, that&rsquo;s the first thing that happens with FaceTracker: it runs a Haar detector that figures out generally where something that looks like a face might be in the image.</p>
+
+<p>And then from there it gets into the landmark fitting and that&rsquo;s what this image is showing.</p>
+
+<p><img src="http://farm7.staticflickr.com/6047/7004880449_27fc525462_c_d.jpg" alt="Saragih's Landmark fitting illustration" /></p>
+
+<p>This image is showing that from the general idea of where the face can be you can throw down some initial markers &mdash; you can throw your curling stone in the generally right direction (I like that example; I can go to Canada and use it). So you throw your stone in the right direction, you make some guesses based on this initial Haar detection and then from each of these guesses you have some information that looks like this [<em>indicating the highlighted regions in the section of the diagram labeled &ldquo;Image and Search Windows&rdquo;</em>]. So he shows if you&rsquo;re looking at a chin, at this landmark on the chin, then you get some kind of feature that looks like this [<em>indicating the zoomed images labeled &ldquo;p(ln|x)&rdquo;</em>]. And this looks really funny. It doesn&rsquo;t look like the chin because it looks like its been normalized and inverted. So even though this part of the chin is darker, here it appears brighter. I think its inverted or might just be equalized in a weird way. I&rsquo;m not sure. There&rsquo;s some kind of processing that happens on the landmark so that it will be more consistent in different lining situations and different skin colors and all that sort of thing.</p>
+
+<p>After you get this initial guess and you lay down all these landmarks, then you feed them into this model [<em>indicating the middle image in the diagram, labeled &ldquo;Optimization&rdquo;</em>], which tells you what that landmark should look like. So this is what it looks like right now which is our initial guess, but we have something to compare it to which is what it should look like. Then you run through that mean shift algorithm &mdash; I mean it&rsquo;s not exactly mean shift; it&rsquo;s related to mean shift &mdash; but we run through that algorithm slowly refining the position of the landmark until it matches up better.</p>
+
+<p>And there&rsquo;s one more thing going on which is that the positions of these landmarks can&rsquo;t move completely independently. The eyebrows are great examples actually. If I have these landmarks here and these land marks here [<em>indicating both rows of landmarks on the eyebrows in the &ldquo;Image and Search Windows&rdquo; section of the diagram</em>]. Well, let&rsquo;s just say this one and this one, the two outermost eyebrow landmarks. Each one has an optimal way that it should look. Right now it looks like this [<em>indicating the appearance of the landmark in the row of images labeled &ldquo;p(n|x)&rdquo;</em>] but  it should look like this [<em>indicating the appearance of the landmark in the image labeled &ldquo;Optimization&rdquo;</em>]. And if we were to optimize each of those landmarks individually, then we would move them around until they were in just the right spot and then we&rsquo;re done. And then we&rsquo;d move this next one into the right spot until its done. However, they are kind of tied to each other so with the FaceTracker all of the different features are tied to each other little bit. The eyebrows are always assumed to be the same height. They can move independently a little bit, but in general if you raise your eyebrow you raise them at the same time. Its very uncommon in day-to-day experience to raise just one eyebrow. And because because FaceTracker was trained on day-to-day images it doesn&rsquo;t model different eyebrows very well.</p>
+
+<p>So it makes some guesses about things that are tied together. Some other things that are tied together are the eye openness. You can&rsquo;t really tell it to detect one eye being open while the other eye is closed. The mouth is another good example. If you open up your mouth then its not like one side of your mouth could get detected as being closed and the other side could be detected as open. The mouth exists in one of these states that is two dimensional where you&rsquo;re opening it a certain amount and you&rsquo;re making it wider a certain amount. So the idea is that all these points  are kind of constrained to each other and there are some relationships between them but they also have individual properties that you are trying to optimize for. You&rsquo;re trying to twist those knobs until the goal is met the way it should look like. and so this mean shift process isn&rsquo;t just about fitting each of these landmarks by themselves but it&rsquo;s a lot about filling these landmarks relative to the landmarks as well.</p>
+
+<p><em>So, those constraints are to reduce the difficulty of the optimization.</em></p>
+
+<p>Exactly, it&rsquo;s to reduce the number of knobs you have to deal with or to reduce the number of dimensions that you are talking about. And like I said earlier when the number of dimensions for a problem is really high it makes it really hard to solve because there are so many different ways of solving it. Imagine you sit down in front of a box that has two norms and someone says &ldquo;Please turns these norms until you hear the  tone.&rdquo; And there is only one right answer and it&rsquo;s 5 o'clock and 6 o'clock and then you hear the tone &ldquo;Ah few! Got it.&rdquo; Now if someone sits you down in front of a box with 200 knobs and they are like &ldquo;Please turns the knobs before you hear the tone.&rdquo; And the answer is like 5 o'clock, 6 o'clock, 7 o'clock, 5 o'clock, 2 o'clock then you are never going to find it because it takes too much time to try tweaking all of them and they are all independent of each other. So, we know what this is doing. It&rsquo;s kind of like someone giving you a hint like: &ldquo;By the way the bottom hundred knobs all have the same value.&rdquo; Then all of a sudden your problem is significantly reduced. So, what he is doing here is saying we can make some guesses about how the features of the face move together. So, instead of trying to optimize them independently we can kind of use the information from one to reduce the number of dimensions.</p>
+
+<p><em>So is that one of the things that makes this algorithm run faster than the slow ones you were talking about?</em></p>
+
+<p>Yeah. I think so. I think that&rsquo;s one of the things that&rsquo;s going here. The other algorithms  have some kind of dependency between the landmarks as well, but I think he is using it in a different way here because he keeps saying in the paper that it converges faster than the other algorithms, which I suspect would mean that he is using this kind of dimensionality reduction in a really smart way. So, yeah this is my high level understanding.</p>
+
+<p><em>And then the thing we&rsquo;re comparing as we move each of the features around, the thing we&rsquo;re comparing it to is the result of the trained data?</em></p>
+
+<p>Exactly.</p>
+
+<p><em>The middle graph part of that graphic.</em></p>
+
+<p>Yeah. So this is what the training thing may you are trying optimizing should look like yeah.</p>
+
+<p><em>Great! I think that really covers it well. Was there any other things there to talk about?</em></p>
+
+<p>I thought it was actually pretty good. Let see if there is any other cool pictures just for a second. Yeah, actually so here.</p>
+
+<p><img src="http://farm8.staticflickr.com/7188/7004967625_73f7b0f5bf_z_d.jpg" alt="Saragih's response maps illustration" /></p>
+
+<p>He&rsquo;s showing some of the responses of the different landmarks to look like. This is good. So you can see this is for different databases maybe like what different noses look like for different databases. Oh no sorry these aren&rsquo;t for different databases, I&rsquo;m not actually sure what that&rsquo;s comparing.</p>
+
+<p><img src="http://farm8.staticflickr.com/7273/6858856244_a918e441de_z_d.jpg" alt="Saragih mean-shift illustration" /></p>
+
+<p>This is just another description of what mean shift generally looks like: this idea of picking a point then refining it.</p>
+
+<p>It&rsquo;s always fun to just jump through the paper and look for images and see if you get a feeling for something like that…</p>
+
+<p><em>Is that also a way for the author to tell you what&rsquo;s important in the paper?</em></p>
+
+<p>I think so. I think sometimes, but it&rsquo;s complicated. You can&rsquo;t quite make that assumption because when people publish papers they&rsquo;re often constrained in different ways. Sometimes the person that they are working under tells them that they have to have certain images or the person that they&rsquo;re trying to get it published with tells them you can&rsquo;t use these images because they don&rsquo;t add to the paper even though the author might think they&rsquo;re really important. So, in general I would say that images are demonstrating important things about the paper or things that might not be intuitive from reading pseudo code or type, but I wouldn&rsquo;t make the assumption quite that those are always the important things.</p>
+
+<p><em><a href="http://www.dustynrobots.com/">Dustyn</a> was telling me that often times the journals actually end up owning the copyright of the images too, so you can&rsquo;t reproduce them yourself. So people generate images they are not necessarily the ones that there most treasured specifically for journals.</em></p>
+
+<p>Yeah, I think I have heard that. Or generate a huge database of different instances so that no one owns all of those instances. Yeah.</p>
+
+<p>This is a really nice one.</p>
+
+<p><img src="http://farm8.staticflickr.com/7241/7004983331_948601fc62_z_d.jpg" alt="Saragih landmark optimizations under occlusion" /></p>
+
+<p>Jason shows that if you take the same sequence of four images 1, 2, 3, 4 and then use different algorithms to optimize the landmark positions you can get different results over the course of a face being occluded. He moves this newspaper across his face and you can see that with good tracking it should look like this [<em>pointing at an image from the leftmost column</em>], you should have the face in a good position. Then it&rsquo;s messed up but that&rsquo;s only because he&rsquo;s completely obscuring his eyes. And then [<em>after he removes the newspaper</em>] it&rsquo;s still a little messed up, but then when he takes it away it&rsquo;s in the right place again. And then there&rsquo;s another algorithm just above that where it shows the same thing is going on, but then when he takes the newspaper off it&rsquo;s  really messed up. And then there&rsquo;s others still. And you can see these shapes don&rsquo;t look anything like the faces. You can see there&rsquo;s the jaw here, and the nose here, and the eye here, but &mdash; I&rsquo;d have to read through again &mdash; but whatever algorithm he&rsquo;s using to do this is probably really ignoring those kind of constraints that I was talking about earlier, the things that are learned from the training data.</p>
+
+<p><em>One other small point that was not obvious: you said that using that 3D model means that there&rsquo;s actually some 3D information associated with the face points.</em></p>
+
+<p>Right. That&rsquo;s a really good point. The way that FaceTracker works it&rsquo;s not just working in 2D. The way that I understand it bootstraps everything by making a 2D guess about stuff. There&rsquo;s the Haar detection and it figures out the general location and the size of the face and the orientation and  the location and size. And then you put down some initial points in 2D. But this process of  optimizing them doesn&rsquo;t just have to do with the image content. It doesn&rsquo;t just have to do with the landmarks or the features. It also has to do with the constraints between the features that I was talking about, like the eyebrows moving together. And it has to do with constraints of the face as a whole. So if this algorithm keeps moving a bunch of the features in a way that it&rsquo;s leading you to think that it&rsquo;s a rotated face &mdash; if it&rsquo;s moving the features at the top to the right, and the features at the bottom to the left &mdash; then what&rsquo;ll happen is, internally FaceTracker will start to think, &lsquo;oh, this face looks like it&rsquo;s rotated&rsquo;. So when it makes more new guesses about the positions of the landmarks, it&rsquo;s going to assume that the landmarks are rotated now. And it&rsquo;ll do comparisons based on that. So, Not just are the eyebrows tied together and the mouth points tied together, but actually all of the points on the face are tied together by the orientation of the face. And there&rsquo;s some kind of complex feedback I don&rsquo;t understand between the points in 2D space and the points in 3D space. Because once you have the points in 2D space, you can get an idea of what the 3D points should be like, and then you can smooth out those points in 3D space to represent a face better and then feed that back into 2D space. And there&rsquo;s a name for this. In 2D space when you&rsquo;re moving things around I think it&rsquo;s called <a href="http://en.wikipedia.org/wiki/Procrustes_analysis">procrustes alignment</a> [<em>original paper: <a href="http://www.cse.sc.edu/~songwang/CourseProj/proj2004/ross/ross.pdf">here</a> and another interesting one <a href="http://www.bmva.org/bmvc/1999/papers/05.pdf">here</a></em>], and that&rsquo;s just referring to jiggling things around a little bit. But when you&rsquo;re in 3D space then it has another name and you&rsquo;re orienting and scaling stuff. So, internally there is a 3D representation of the face, but it&rsquo;s only 3D in a faux 3D sense because you don&rsquo;t really know about the field of view of the camera, for example. Since you don&rsquo;t know about the field of view of the camera or other features of the camera, you don&rsquo;t really know haw far away the face is, or how big it is, or the absolute distance from the camera to the face, or any of that stuff.</p>
+
+<p><em>Does that 3D information help with occlusion, like knowing you shouldn&rsquo;t be looking for the left eye because the face is turned to a three-quarter view?</em></p>
+
+<p>Yeah, it&rsquo;s hard to say. It should. It should help with that, but I also know that there&rsquo;s just some modes inside FaceTracker where it&rsquo;s either in frontal mode or left facing mode or right facing mode. So I think it&rsquo;s probably something as it&rsquo;s tracking the face. It also tracks the face from frame to frame. It&rsquo;s not reinitializing from the Haar detection every frame. It does that once to find the face and then as the face moves from frame to frame it just refines its guess. So you have to start by looking at it straight so the Haar detector can get you, and then you can do all sorts of crazy stuff because it&rsquo;s refining its guess to catch up with you. But as you start moving slowly to look in an extreme direction then it might just have some mode internally where it says, &lsquo;oh, you&rsquo;ve looked too far, stop looking for the points on that side of the face because you can&rsquo;t see them anymore&rsquo;. I’m guessing it just has a mode once you reach that orientation</p>
+
+<p><em>So that initial Haar detection phase is part of why FaceTracker runs slower when it’s searching for a face than once it&rsquo;s found one?</em></p>
+
+<p>Exactly, yeah. Because Haar detection is a much slower algorithm then doing the landmark mean shift deformation.</p>
+
+<p><em>And then that switch to the mode when it uses the time-based aspect you&rsquo;re saying that it&rsquo;s refining based on where it knew the points were last frame, for example. So it looks nearby to that to start?</em></p>
+
+<p>Yeah, right. Exactly. That&rsquo;s also why you&rsquo;ll get errors when you move your face really fast especially in and out because it makes assumptions about how far or how fast you could possibly be moving your face and if you start moving it really fast then it gets surprised and doesn&rsquo;t know where to look for things so it can lose your face a little bit. Especially in and out is really uncommon. Its pretty common for people to do this [<em>tilts head side-to-side</em>]. Not so common for people to do this [<em>raises head up and down</em>], and definitely uncommon for people to do this [<em>pushes head forward and back</em>]. So it makes some guesses about what kind of movement is reasonable and it searches within reasonable limits for that kind of movement.</p>
+
+<p><em>So i guess as a final question what other avenues of research has this opened up for you? After having gone through this and understanding and learned about it, what now do you think is the next step? What&rsquo;s the next door in the house of knowledge that opens up for you?</em></p>
+
+<p>This is kind of connected to the <a href="http://research.microsoft.com/pubs/145347/BodyPartRecognition.pdf">Microsoft skeleton tracking paper</a> in a way, because they are both using this idea of landmarks and identifying parts of something based on local information but also refining in a global sense as well. So I don’t know if I can say that one really led me to the other but I would say that seeing that both of the techniques are based on that local refinement and  global refinement simultaneously helps me understand both of them together better. And this has also got me interested in other techniques for doing 6 degree of freedom head pose estimation. That just means 3 degrees for translation or position: x, y, and z, and then 3 degrees for orientation which is like you know this [<em>turns head left and right, tilts head up and down, wobbles head side-to-side</em>]. There are some other techniques for doing 6 degree of freedom head tracking. One of them is with Kinect, using depth data you can do something similar to what they did in the Microsoft skeleton tracking paper for tracking the head position and orientation. Its completely different than anything that Jason is doing so its really stable in some situations and  gives you weird results in other situations. You can fake it out by making something small and face shaped with your hand and it will track it as its moving around.</p>
+
+<p><em>Is that how the face tracking stuff in the Microsoft Kinect for Windows API works?</em></p>
+
+<p>I don’t know I haven&rsquo;t looked at that. I wouldn&rsquo;t be surprised because I think that they are really leveraging that skeleton tracking algorithm.</p>
+
+<p><em>Okay great thanks a lot. This was great.</em></p>
+
+<p>Thanks.</p>
+
+  
+  </div>
+</div>
+<div id="sidebar" class="span-4 push-1">
+  <h4>
+    Mentioned Links
+  </h4>
+  <ul id="mentioned_links">
+
+  </ul>
+</div>
+
+
+      </div>
+
+      <div id="footer" class="span-20 push-2">
+        <p>&copy; Greg Borenstein 2012 <span class="footer-divider">|</span> <a href="http://twitter.com/makematics">@makematics</a> <span class="footer-divider">|</span> <a href="http://github.com/atduskgreg/makematics">github/makematics</a>
+        </p>
+      </div>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

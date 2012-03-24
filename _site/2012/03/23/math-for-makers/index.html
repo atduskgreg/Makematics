@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Math for Makers</title>
+    
+    <meta name="author" content="Greg Borenstein">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <!--[if lt IE 9]>
+    <![endif]-->
+        <link href="/assets/css/blueprint/ie.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le styles -->
+    <link href="/assets/css/blueprint/screen.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style>
+      body{
+        font-size: 100%;
+        line-height: 1.5;
+        background-color: #dee;
+      }
+
+      #header {
+        margin-bottom: 3em;
+      }
+      
+      h1 a{
+        text-decoration: none;
+        color: #eff;
+        background: #566;
+                
+      }
+      
+      h1 a:hover{
+        color: #eff;
+
+      }
+      
+      h1 {
+        font-size: 32px;
+        border-bottom: 4px solid #566;
+      }
+      
+      
+      a{
+                text-decoration: none;
+      }
+      
+      a:hover{
+                text-decoration: underline;
+
+      }
+      
+      h2 a {
+        font-weight: bold;
+        color: #566;
+      }
+
+      h2 a:hover{
+        color: #566;
+      }
+
+      h2 {
+          font-weight: bold;
+        color: #566;
+      }
+     
+      
+      #sidebar {
+        border-left: 1px solid #cdd;
+        padding-left: 9px;
+        margin-top: 160px;
+      }
+      
+      #sidebar a {
+        color: #566;
+      }
+      
+      #sidebar ul {
+        color: #566;
+                padding-left: 5px;
+
+      }
+      #sidebar li {
+        margin-bottom: 16px;
+        list-style-type: none;
+      }
+
+
+      #footer {
+        border-top: 2px solid #cdd;
+        text-align: center;
+        font-style: italic;
+        color: #566;
+        padding-top: 1em;
+        font-size: 75%;
+      }
+
+      .footer-divider{
+        color: #cdd;
+
+      }
+      
+    </style>
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  
+
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div id="header" class="span-20 push-2">
+          <h1 style="color:orange"><a href="/">Makematics</a></h1>
+      
+      </div>
+
+      <div id="content-wrapper" class="span-20  push-2">
+        
+<div id="content" class="span-14">
+
+<div class="page-header">
+  <h2>Math for Makers</h2>
+  <p class="date"><em>23 March 2012</em></p>
+</div>
+
+    <p>Artists build on top of science.</p>
+
+<p>Renaissance painters used Cartesian geometry to invent perspective. Nineteenth century photographers' adapted industrial chemistry into the photographic process. Contemporary filmmakers shoot on cutting edge cameras made possible by the latest in sensor miniaturization. Each generation of artists turns the knowledge of their time into new creative tools.</p>
+
+<p>No generation of artists has ever been more dependent on scientific and technical advances than today&rsquo;s. Today&rsquo;s artists work on computers. Advances in computer science and related mathematical fields underlie everything that digital artists make. Recently these advances have lead to the advent of whole new creative fields like interactive art, generative graphics, data visualization, and digital fabrication.</p>
+
+<p>In order to produce excellent and novel work in these new fields, artists have had to learn computational and mathematical techniques. They started with basic material like trigonometry for 2D games and graphics, the rudiments of computer vision for interactive installations, and primitive signal processing for embedded electronics.</p>
+
+<p>Increasingly these new creative fields are becoming the basis of art and design across our culture. And these techniques are becoming the foundation of a new kind of art and design education. A cohort of today&rsquo;s best art and design schools teach introductory programming and a survey of these basic topics as their core curriculum (<a href="http://itp.nyu.edu">NYU ITP</a>, <a href="http://studioforcreativeinquiry.org">CMU&rsquo;s Studio for Creative Inquiry</a>, <a href="http://www.newschool.edu/parsons/">Parson&rsquo;s</a>, <a href="http://ciid.dk/">CIID</a>, <a href="http://dma.ucla.edu/">UCLA Design Media Arts</a>, etc.).</p>
+
+<p>However, as these new creative fields advance, driven by their own internal momentum and inspired by the advent of new developments in computer science and technology, they are beginning to require more advanced math and programming techniques. Today&rsquo;s SIGGRAPH papers and academic journal articles are tomorrow&rsquo;s breakthrough creative coding projects.</p>
+
+<p>Topics like linear algebra, topology, graph theory, and machine learning are becoming vital prerequisites both to doing daily work in these fields and, more importantly, to inventing, popularizing, and teaching the new creative tools that are rapidly arising. Without them, artists are forced to wait for others to digest this new knowledge before they can work with it. Their creative options shrink to those parts of this research selected by Adobe for inclusion in prepackaged tools. Instead of the themes and concerns of creative work driving the selection of tools from a growing technical cornucopia, artists find themselves turned into passive users of tools that are already curated, contextualized, and circumscribed by others.</p>
+
+<p>So, I want to do something about this. I want to figure out a way to teach myself and others these more advanced mathematical and computational concepts with a specific eye towards applying them in creative technology. For example, I want to be able to read SIGGRAPH papers, understand what&rsquo;s going on in them, explain that to others, and create software libraries that implement their techniques. I want my peers who do data visualization to be able to implement regressions, curve fitting, statistical analysis and machine learning so that their projects are more than just pretty graphs with good typography. I want the hardware hackers who are building the next generation of DIY 3D printers to be able to turn topological algorithms and concepts into open source tool path generation software that creates more efficient gcode and enables the fabrication of previously impossible physical forms.</p>
+
+<p>I don&rsquo;t know the best way to go about this, but this site is intended to act as home for my experiments. Here, I&rsquo;ll collect research papers with potential as creative tools. I&rsquo;ll catalog the mathematical and computer science terminology and techniques used in these papers. I&rsquo;ll work to explain this terminology in plain English and to translate these techniques into comprehensible, publicly available code. I&rsquo;ll interview other digital artists and researchers who understand parts of this material in order to capture and spread their knowledge. I&rsquo;ll try any approach that has the potential to help us gain some grasp on these new areas and I&rsquo;ll collaborate with anyone&rsquo;s who&rsquo;s interested in helping.</p>
+
+<p>To inaugurate this site, I conducted <a href="/research/facetracker">an interview with Kyle McDonald about FaceTracker</a>. <a href="http://kylemcdonald.net">Kyle</a> is an artist and researcher who embodies much of the spirit of this site. He&rsquo;s a key member of the <a href="http://openframeworks.cc">OpenFrameworks</a> community and he&rsquo;s done extensive work democratizing 3D scanning. Last October he released the first public results of a library for fast, accurate, face-tracking he built for OpenFrameworks. That library was based on the work of <a href="http://web.mac.com/jsaragih">Jason Saragih</a>, a computer vision researcher at CSIRO. Since the release of Kyle&rsquo;s library, there&rsquo;s been an explosion of projects in the creative coding community using his code to explore the possibilities of face-based interaction. I asked Kyle to explain how he first found Saragih&rsquo;s work and to walk through how the algorithm works. I think the results represent a terrific introduction to many key areas of computer vision and to understanding FaceTracker in particular. In addition to to the video, I&rsquo;ve provided a transcript of the interview that I&rsquo;ve annotated with links and additional media.</p>
+
+<p>Much of the rest of this site is currently under construction, but I&rsquo;ll be announcing additional sections as well as further interviews and other material soon. You can follow along and get in touch with me about the project through the <a href="http://twitter.com/makematics">makematics twitter account</a>. If you&rsquo;d like to get involved, this site is on Github: <a href="http://github.com/atduskgreg/makematics">atduskgreg/makematics</a>. Contributions of all forms are welcome, from writing to code to graphic design or other media.</p>
+
+<p>In conclusion, a note about the intended voice of this site. All too frequently the technical and mathematical issues discussed here are written about solely by experts for other experts. And even when it does appear in venues intended for more general consumption, the material is usually presented as if its own internal logic and rigor made it naturally comprehensible. I don&rsquo;t believe this is true.</p>
+
+<p>I think my greatest advantage in this effort is that I am a  beginner myself. I am not an expert in computer vision, computer science, or mathematics. I&rsquo;m a programmer and an artist who&rsquo;s committed to struggling with this material until I understand it and can make it comprehensible and useful for myself and others. I won&rsquo;t hide the frustrations and confusions that are inevitable in the process. I hope to show that a normal programmer with no special academic training can grapple with these areas of research and find a way in to understanding them and making them part of my creative work. And as I go I aim to create material that will help others do the same.</p>
+
+<p>If I can do it, there&rsquo;s no reason you can&rsquo;t.</p>
+
+    
+    
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+
+  
+  <div class="span4">
+    
+
+    
+  </div>
+</div>
+
+<div id="sidebar" class="span-4 push-1">
+  <h4>
+    Current Topics
+  </h4>
+  <ul>
+ 	<li>
+ 		<a href="/research/facetracker">FaceTracker</a>
+ 	</li>
+ 	<li>
+ 		<a href="/research/haar_detection">Haar Detection</a>
+ 	</li>
+  </ul>
+  <p>
+<em>
+  more coming soon...
+</em>
+  </p>
+</div>
+
+
+      </div>
+
+      <div id="footer" class="span-20 push-2">
+        <p>&copy; Greg Borenstein 2012 <span class="footer-divider">|</span> <a href="http://twitter.com/makematics">@makematics</a> <span class="footer-divider">|</span> <a href="http://github.com/atduskgreg/makematics">github/makematics</a>
+        </p>
+      </div>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

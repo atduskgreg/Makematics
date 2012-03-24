@@ -12,6 +12,15 @@ html, body {
   text-align: center; /* center align it with the container */
 }
 
+h1 a {
+    color: orange;
+}
+
+h1 a:hover {
+    color: orange;
+    text-decoration: none;
+}
+
 /* The white background content wrapper */
 .content {
   background-color: #fff;

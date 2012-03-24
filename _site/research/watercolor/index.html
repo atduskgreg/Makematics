@@ -12,9 +12,103 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+
+    <!--[if lt IE 9]>
+    <![endif]-->
+        <link href="/assets/css/blueprint/ie.css" rel="stylesheet" type="text/css" media="all">
+
     <!-- Le styles -->
-    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/css/blueprint/screen.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style>
+      body{
+        font-size: 100%;
+        line-height: 1.5;
+        background-color: #dee;
+      }
+
+      #header {
+        margin-bottom: 3em;
+      }
+      
+      h1 a{
+        text-decoration: none;
+        color: #eff;
+        background: #566;
+                
+      }
+      
+      h1 a:hover{
+        color: #eff;
+
+      }
+      
+      h1 {
+        font-size: 32px;
+        border-bottom: 4px solid #566;
+      }
+      
+      
+      a{
+                text-decoration: none;
+      }
+      
+      a:hover{
+                text-decoration: underline;
+
+      }
+      
+      h2 a {
+        font-weight: bold;
+        color: #566;
+      }
+
+      h2 a:hover{
+        color: #566;
+      }
+
+      h2 {
+          font-weight: bold;
+        color: #566;
+      }
+     
+      
+      #sidebar {
+        border-left: 1px solid #cdd;
+        padding-left: 9px;
+        margin-top: 160px;
+      }
+      
+      #sidebar a {
+        color: #566;
+      }
+      
+      #sidebar ul {
+        color: #566;
+                padding-left: 5px;
+
+      }
+      #sidebar li {
+        margin-bottom: 16px;
+        list-style-type: none;
+      }
+
+
+      #footer {
+        border-top: 2px solid #cdd;
+        text-align: center;
+        font-style: italic;
+        color: #566;
+        padding-top: 1em;
+        font-size: 75%;
+      }
+
+      .footer-divider{
+        color: #cdd;
+
+      }
+      
+    </style>
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -23,94 +117,43 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  
+
+
   </head>
 
   <body>
-
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/">Makematics</a>
-          <ul class="nav">
-            
-            
-            
-
-
-  
-    
-    	
-    	<li><a href="/archive.html">Archive</a></li>
-    	
-    
-  
-    
-  
-    
-    	
-    	<li><a href="/categories.html">Categories</a></li>
-    	
-    
-  
-    
-  
-    
-    	
-    	<li><a href="/pages.html">Pages</a></li>
-    	
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-    	
-    	<li><a href="/tags.html">Tags</a></li>
-    	
-    
-  
-
-
-
-          </ul>
-        </div>
-      </div>
-    </div>
-
     <div class="container">
 
-      <div class="content">
+      <div id="header" class="span-20 push-2">
+          <h1 style="color:orange"><a href="/">Makematics</a></h1>
+      
+      </div>
+
+      <div id="content-wrapper" class="span-20  push-2">
         
 <div class="page-header">
-  <h1>Computer-Generated Watercolor <small></small></h1>
+  <h2>Computer-Generated Watercolor <small></small></h2>
 </div>
 
 <div class="row">
   <div class="span12">
-    <h4 id='original_paper'>Original Paper</h4>
+    <h4>Original Paper</h4>
 
-<p><a href='http://grail.cs.washington.edu/projects/watercolor/'>Computer-Generated Watercolor</a> by Cassidy J. Curtis Sean E. Anderson, Joshua E. Seims Kurt W. Fleischery, and David H. Salesin</p>
+<p><a href="http://grail.cs.washington.edu/projects/watercolor/">Computer-Generated Watercolor</a> by Cassidy J. Curtis Sean E. Anderson, Joshua E. Seims Kurt W. Fleischery, and David H. Salesin</p>
+
   </div>
 </div>
 
 
       </div>
 
-      <footer>
-        <p>&copy; Greg Borenstein 2012 
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+      <div id="footer" class="span-20 push-2">
+        <p>&copy; Greg Borenstein 2012 <span class="footer-divider">|</span> <a href="http://twitter.com/makematics">@makematics</a> <span class="footer-divider">|</span> <a href="http://github.com/atduskgreg/makematics">github/makematics</a>
         </p>
-      </footer>
+      </div>
 
     </div> <!-- /container -->
 
