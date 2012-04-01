@@ -5,6 +5,7 @@ http://makematics.com/categories.html
 http://makematics.com/index.html
 http://makematics.com/pages.html
 http://makematics.com/research/dfd/index.html
+http://makematics.com/research/dtam/index.html
 http://makematics.com/research/facetracker/index.html
 http://makematics.com/research/gigavoxels/index.html
 http://makematics.com/research/haar_detection/index.html

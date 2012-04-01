@@ -11,6 +11,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <link rel="alternate" type="application/atom+xml" title="Star Wars Modern - Atom" href="http://makematics.com/atom.xml" />
 
     <!--[if lt IE 9]>
     <![endif]-->
@@ -92,6 +93,13 @@
         list-style-type: none;
       }
 
+      #pagination li {
+        list-style-type: none;
+      }
+
+      #pagination .disabled {
+        display: none;
+      }
 
       #footer {
         border-top: 2px solid #cdd;
@@ -107,6 +115,8 @@
 
       }
       
+
+
     </style>
 
     <!-- Le fav and touch icons -->
@@ -120,6 +130,7 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
   
 
+    {% include JB/analytics %}
 
   </head>
 
@@ -142,6 +153,5 @@
 
     </div> <!-- /container -->
 
-    {% include JB/analytics %}
   </body>
 </html>

@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Research</title>
+    <title></title>
     
     <meta name="author" content="Greg Borenstein">
 
@@ -12,6 +12,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <link rel="alternate" type="application/atom+xml" title="Star Wars Modern - Atom" href="http://makematics.com/atom.xml" />
 
     <!--[if lt IE 9]>
     <![endif]-->
@@ -93,6 +94,13 @@
         list-style-type: none;
       }
 
+      #pagination li {
+        list-style-type: none;
+      }
+
+      #pagination .disabled {
+        display: none;
+      }
 
       #footer {
         border-top: 2px solid #cdd;
@@ -108,6 +116,8 @@
 
       }
       
+
+
     </style>
 
     <!-- Le fav and touch icons -->
@@ -120,6 +130,23 @@
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
   
+
+    
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30323324-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
 
 
   </head>
@@ -135,7 +162,7 @@
       <div id="content-wrapper" class="span-20  push-2">
         
 <div class="page-header">
-  <h2>Research <small></small></h2>
+  <h2> <small></small></h2>
 </div>
 
 <div class="row">
@@ -143,6 +170,13 @@
     <h2>Academic Papers</h2>
 
 <p><em>This section lists academic papers that describe techniques we&rsquo;d like to implement in code. These can range from artistic effects in computer graphics to novel 3D scanning or computer vision approaches to ways of processing or generating 3D geometry for fabrication. Each entry includes a brief description of the technique and links to a page with more details. Those pages will act as a working area to understand and explain the technique as well as including links to code that implements it. If you would like to participate in breaking down or implementing any paper, please do so. Participation is highly welcome.</em></p>
+
+<h3><a href="/research/dtam">Dense Tracking and Mapping in Real-Time</a></h3>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/Df9WhgibCQA" frameborder="0" allowfullscreen></iframe>
+
+
+<p><em>This video demonstrates a technique for creating 3D models of a scene by moving a conventional RGB camera around the scene. It works by looking at the changes in the pixels as the camera moves to reconstruct the scene&rsquo;s geometry as well as the position and orientation of the camera.</em></p>
 
 <h3><a href="/research/dfd">Depth from Focus/Defocus</a></h3>
 
@@ -201,6 +235,8 @@
 
 <h3><a href="/research/kalman">Kalman Filters</a></h3>
 
+<h3><a href="http://www.cs.ucf.edu/courses/cap6412/fall2009/papers/Berwick2003.pdf">Support Vector Machines</a></h3>
+
 <h2>Programming Techniques</h2>
 
 <p><em>This section lists programming techniques that are needed to implement the ideas and algorithms in the academic papers listed above. To turn the ideas in these papers into practical code often involves learning to write code that uses some of the advanced features of modern graphics programming. The pages linked from this section will act as a working area to understand these features and how to use them in practice. Where possible they will include examples in as many languages as possible. Contributions welcome.</em></p>
@@ -215,6 +251,8 @@
 
 <h3>Vertex Buffer Objects (VBOs)</h3>
 
+<h3><a href="http://www.eecs.wsu.edu/~ananth/CptS223/Lectures/UnionFind.pdf">Union-Find</a></h3>
+
   </div>
 </div>
 
@@ -228,7 +266,6 @@
 
     </div> <!-- /container -->
 
-    
   </body>
 </html>
 

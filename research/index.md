@@ -1,12 +1,17 @@
 ---
 layout: page
-title: "Research"
 ---
 {% include JB/setup %}
 
 ## Academic Papers
 
 _This section lists academic papers that describe techniques we'd like to implement in code. These can range from artistic effects in computer graphics to novel 3D scanning or computer vision approaches to ways of processing or generating 3D geometry for fabrication. Each entry includes a brief description of the technique and links to a page with more details. Those pages will act as a working area to understand and explain the technique as well as including links to code that implements it. If you would like to participate in breaking down or implementing any paper, please do so. Participation is highly welcome._
+
+### [Dense Tracking and Mapping in Real-Time](/research/dtam)
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/Df9WhgibCQA" frameborder="0" allowfullscreen></iframe>
+
+_This video demonstrates a technique for creating 3D models of a scene by moving a conventional RGB camera around the scene. It works by looking at the changes in the pixels as the camera moves to reconstruct the scene's geometry as well as the position and orientation of the camera._
 
 ### [Depth from Focus/Defocus](/research/dfd)
 
@@ -64,6 +69,8 @@ _This section lists mathematical techniques and terms that show up repeatedly in
 
 ### [Kalman Filters](/research/kalman)
 
+### [Support Vector Machines](http://www.cs.ucf.edu/courses/cap6412/fall2009/papers/Berwick2003.pdf)
+
 
 ## Programming Techniques
 
@@ -78,3 +85,5 @@ _This section lists programming techniques that are needed to implement the idea
 ### Geometry Shaders
 
 ### Vertex Buffer Objects (VBOs)
+
+### [Union-Find](http://www.eecs.wsu.edu/~ananth/CptS223/Lectures/UnionFind.pdf)
